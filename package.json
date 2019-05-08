@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ben v",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "commander": "^2.20.0",
+    "node-fetch": "^2.5.0",
+    "stdio": "^0.2.7"
+  }
 }
