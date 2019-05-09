@@ -1,23 +1,10 @@
-/** 	
-	TODO: 
-	** Starship sales site w/features:
-	 - list all starships
-	 - filter by price
-	 - sort by price 
-	 - search list of ships 
-	 - view individual ships 
-	 - view pilot info of ships
-	 
-	 API endpoints: http://swapi.co/api/starships & http://swapi.co/api/people/:id
-**/
 const fetch = require('node-fetch');
 const colors = require('colors');
-const url = require('url');
 const program = require('commander');
 
 program
   .version(`1.0.0`.white)
-  .description(`A handy command line reference for Star Wars`.rainbow
+  .description(`A command line reference for Star Wars starships`.rainbow
   .option(`-a, --all`, `Show all raw starship info`)
   .option(`-l, --list`, `List some ship tech specs`)
   .option(`-p, --price`, `Filter ships by price`)
@@ -25,7 +12,6 @@ program
   .parse(process.argv);
     
 console.log(` In a computer terminal far far away... \n Run -h or --help for all options`.cyan);
-
 
 function getStarships() {
    fetch(`http://swapi.co/api/starships`).then((res) => {
@@ -60,5 +46,4 @@ function getStarships() {
 	    }).catch(error => console.error(`There was an ${error}`.red))
 	   
 }
-
 getStarships();
